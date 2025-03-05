@@ -37,7 +37,14 @@ El flujo se divide en tres componentes principales:
 ### 1. Configuración de PostgreSQL y Debezium
 
 - **Docker**: Asegúrate de tener **Docker** instalado para ejecutar los contenedores de PostgreSQL, Debezium y Kafka.
-  
+
+#### Comando para crear el conector Debezium
+```bash
+ curl -X POST http://localhost:8083/connectors -H "Content-Type: application/json" -d @register-postgres.json
+```
+
 #### Pasos para ejecutar los contenedores:
 ```bash
 docker-compose -f docker-compose.yml up -d
+```
+
